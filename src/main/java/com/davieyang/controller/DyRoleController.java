@@ -1,9 +1,7 @@
 package com.davieyang.controller;
 
-import com.davieyang.model.AyStudent;
-import com.davieyang.model.AyUserAddress;
-import com.davieyang.service.AyStudentService;
-import com.davieyang.service.AyUserAddressService;
+import com.davieyang.model.DyRole;
+import com.davieyang.service.DyRoleService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,21 +10,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.annotation.Resource;
 
 /**
- * 描述：地址控制层
- *
  * @author Ay
- * @create 2018/05/01
- **/
+ * @date 2018/04/02
+ */
 @Controller
-@RequestMapping(value = "/student")
-public class AyStudentController {
+@RequestMapping(value = "/role")
+public class DyRoleController {
 
     @Resource
-    private AyStudentService ayStudentService;
+    private DyRoleService dyRoleService;
 
     @GetMapping("/findById")
     public String findById(Model model) {
-        AyStudent ayStudent = ayStudentService.findById(1);
+        DyRole dyRole = dyRoleService.findById("1");
         return "success";
     }
+
 }

@@ -4,17 +4,18 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * 描述：学校实体
+ * 描述：角色实体
  *
- * @author Ay
+ * @author davieyang
  * @create 2018/05/01
  **/
-public class AySchool implements Serializable {
+public class DyRole implements Serializable {
 
     private Integer id;
+
     private String name;
-    //一个学校有多个学生
-    private List<AyStudent> students;
+
+    private List<DyUser> dyUserList;
 
     public Integer getId() {
         return id;
@@ -32,11 +33,11 @@ public class AySchool implements Serializable {
         this.name = name;
     }
 
-    public List<AyStudent> getStudents() {
-        return students;
+    public List<DyUser> getAyUserList() {
+        return dyUserList;
     }
 
-    public void setStudents(List<AyStudent> students) {
-        this.students = students;
+    public void setAyUserList(List<DyUser> dyUserList) {
+        this.dyUserList = dyUserList;
     }
 }

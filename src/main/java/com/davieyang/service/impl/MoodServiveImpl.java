@@ -24,7 +24,7 @@ import java.util.List;
 /**
  * 描述：说说服务类
  *
- * @author Ay
+ * @author davieyang
  * @date 2018/1/6.
  */
 @Service
@@ -40,7 +40,7 @@ public class MoodServiveImpl implements MoodService {
     private MoodProducer moodProducer;
 
     //队列
-    private static Destination destination = new ActiveMQQueue("ay.queue.high.concurrency.praise");
+    private static Destination destination = new ActiveMQQueue("davieyang.queue.high.concurrency.praise");
 
 
     public boolean praiseMoodForRedis(String userId, String moodId) {

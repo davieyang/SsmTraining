@@ -8,7 +8,7 @@ import java.io.Serializable;
  * @author Ay
  * @create 2018/05/01
  **/
-public class AyUserRoleRel implements Serializable {
+public class DyUserRoleRel implements Serializable {
 
     private Integer id;
 

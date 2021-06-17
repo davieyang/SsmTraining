@@ -1,21 +1,17 @@
 package com.davieyang.model;
 
 import java.io.Serializable;
-import java.util.List;
 
 /**
- * 描述：角色实体
+ * 描述：用户地址实体
  *
- * @author Ay
+ * @author davieyang
  * @create 2018/05/01
  **/
-public class AyRole implements Serializable {
+public class DyUserAddress implements Serializable {
 
     private Integer id;
-
     private String name;
-
-    private List<AyUser> ayUserList;
 
     public Integer getId() {
         return id;
@@ -31,13 +27,5 @@ public class AyRole implements Serializable {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public List<AyUser> getAyUserList() {
-        return ayUserList;
-    }
-
-    public void setAyUserList(List<AyUser> ayUserList) {
-        this.ayUserList = ayUserList;
     }
 }

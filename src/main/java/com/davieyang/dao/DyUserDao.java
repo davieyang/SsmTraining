@@ -1,46 +1,44 @@
 package com.davieyang.dao;
 
-import com.davieyang.model.AyUser;
+import com.davieyang.model.DyUser;
 import org.apache.ibatis.annotations.*;
-import org.apache.ibatis.session.RowBounds;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Map;
 
 @Repository
-public interface AyUserDao {
+public interface DyUserDao {
 
     @Insert("INSERT INTO ay_user(name,password,age) VALUES(#{name}, #{password}, #{age})")
     @Options(useGeneratedKeys = true, keyProperty = "id")
-    int insert(AyUser ayUser);
+    int insert(DyUser dyUser);
 
-    AyUser findById(String id);
+    DyUser findById(String id);
 
     //    @Select("SELECT * FROM ay_user")
-//    List<AyUser> findAll();
+//    List<DyUser> findAll();
 //    @Select("SELECT * FROM ay_user")
 //    @Results({
 //            @Result(id = true,column = "id",property = "id"),
 //            @Result(column = "name",property = "name"),
 //            @Result(column = "password",property = "password")
 //    })
-    List<AyUser> findAll();
+    List<DyUser> findAll();
 
 //    @Select("SELECT * FROM ay_user WHERE id = #{id}")
 //
 
     //    @Select("SELECT * FROM ay_user WHERE name = #{name}")
-//    List<AyUser> findByName(String name);
+//    List<DyUser> findByName(String name);
 //
 //    int countByName(String name);
 //
 //    @Insert("INSERT INTO ay_user(name,password) VALUES(#{name}, #{password})")
 //    @Options(useGeneratedKeys = true, keyProperty = "id")
-//    int insert(AyUser ayUser);
+//    int insert(DyUser dyUser);
 //
     @Update("UPDATE  ay_user SET name = #{name}, password = #{password} WHERE id = #{id}")
-    int update(AyUser ayUser);
+    int update(DyUser dyUser);
 //
 //    @Delete("DELETE FROM ay_user WHERE id = #{id}")
 //    int delete(int id);
@@ -49,11 +47,11 @@ public interface AyUserDao {
 //    int deleteByName(String name);
 
 //    @Select("SELECT * FROM ay_user WHERE name = #{name} and password = #{password}")
-//    List<AyUser> findByNameAndPassword(@Param("name") String name,@Param("password")String password);
+//    List<DyUser> findByNameAndPassword(@Param("name") String name,@Param("password")String password);
 
-//    List<AyUser> findByNameAndPassword(String name,String password);
+//    List<DyUser> findByNameAndPassword(String name,String password);
 
-//  List<AyUser> findByNameAndPassword(Map<String, String > map);
+//  List<DyUser> findByNameAndPassword(Map<String, String > map);
 
-//    List<AyUser> findByIds(@Param("list") List<Integer> list);
+//    List<DyUser> findByIds(@Param("list") List<Integer> list);
 }

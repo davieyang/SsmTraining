@@ -14,7 +14,7 @@ import javax.jms.Destination;
 /**
  * 生产者jmsTemplate
  *
- * @author Ay
+ * @author davieyang
  * @date 2017/11/30
  */
 @Component

@@ -1,18 +1,14 @@
 package com.davieyang.controller;
 
-import com.davieyang.model.AyUser;
-import com.davieyang.service.AyUserService;
-import com.davieyang.validator.AyUserValidator;
+import com.davieyang.model.DyUser;
+import com.davieyang.service.DyUserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.Errors;
-import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
-import java.util.List;
 
 /**
  * 用户控制层
@@ -22,7 +18,7 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("/user")
-public class AyUserController {
+public class DyUserController {
 
     @RequestMapping("/save")
     public String save() {
@@ -30,17 +26,17 @@ public class AyUserController {
     }
 
     @PostMapping("/insert")
-    public String insert(@Valid @ModelAttribute AyUser ayUser, BindingResult result) {
+    public String insert(@Valid @ModelAttribute DyUser dyUser, BindingResult result) {
         if (result.hasErrors()) {
             return "error";
         }
-        int count = ayUserService.insert(ayUser);
+        int count = dyUserService.insert(dyUser);
         return "success";
     }
 
 
 //    @Resource
-//    private AyUserValidator ayUserValidator;
+//    private DyUserValidator ayUserValidator;
 
 //    @RequestMapping("/save")
 //    public String save(){
@@ -48,19 +44,19 @@ public class AyUserController {
 //    }
 
 //    @PostMapping("/insert")
-//    public String insert(@ModelAttribute AyUser ayUser,Model model, Errors errors){
+//    public String insert(@ModelAttribute DyUser ayUser,Model model, Errors errors){
 //        ayUserValidator.validate(ayUser, errors);
 //        if(errors.hasErrors()){
 //            model.addAttribute("errors", errors);
 //            return "error";
 //        }
-//        int count = ayUserService.insert(ayUser);
+//        int count = dyUserService.insert(ayUser);
 //        return "hello";
 //    }
 
 //    @RequestMapping("/hello")
 //    @ResponseBody
-//    public void hello(@RequestBody  AyUser ayUser){
+//    public void hello(@RequestBody  DyUser ayUser){
 //        System.out.println("name" + ayUser.getName());
 //        System.out.println("password" + ayUser.getPassword());
 //    }
@@ -125,7 +121,7 @@ public class AyUserController {
 
 //    @RequestMapping("redirect")
 //    public String redirectTest(Model model,SessionStatus sessionStatus){
-//        AyUser ayUser = new AyUser();
+//        DyUser ayUser = new DyUser();
 //        ayUser.setName("ay");
 //        model.addAttribute("ayUser",ayUser);
 //        sessionStatus.setComplete();
@@ -133,29 +129,29 @@ public class AyUserController {
 //    }
 //
 //    @RequestMapping("hello")
-//    public String hello(@SessionAttribute AyUser ayUser){
+//    public String hello(@SessionAttribute DyUser ayUser){
 //        System.out.println(ayUser.getName());
 //        return "hello";
 //    }
 
 //    @RequestMapping("hello")
 //    public String hello(ModelMap modelMap){
-//        AyUser ayUser = (AyUser) modelMap.get("ayUser");
+//        DyUser ayUser = (DyUser) modelMap.get("ayUser");
 //        System.out.println(ayUser.getName());
 //        return "hello";
 //    }
 
 //    @ModelAttribute("ayUser")
-//    public AyUser init(@RequestParam("id") Integer id,
+//    public DyUser init(@RequestParam("id") Integer id,
 //                       @RequestParam("name") String name){
-//        AyUser ayUser = new AyUser();
+//        DyUser ayUser = new DyUser();
 //        ayUser.setId(id);
 //        ayUser.setName(name);
 //        return ayUser;
 //    }
 //
 //    @RequestMapping(value="hello")
-//    public String hello(@ModelAttribute("ayUser") AyUser ayUser){
+//    public String hello(@ModelAttribute("ayUser") DyUser ayUser){
 //
 //        return "hello";
 //    }
@@ -178,7 +174,7 @@ public class AyUserController {
 
 //    @ModelAttribute()
 //    public void init(Model model){
-//        AyUser ayUser = new AyUser();
+//        DyUser ayUser = new DyUser();
 //        ayUser.setId(1);
 //        ayUser.setName("ay");
 //        model.addAttribute("user", ayUser);
@@ -217,7 +213,7 @@ public class AyUserController {
 //    }
 
 //    @PostMapping(path = "/add")
-//    public String add(@RequestBody AyUser ayUser) {
+//    public String add(@RequestBody DyUser ayUser) {
 //        // ...
 //        return "";
 //    }
@@ -254,11 +250,11 @@ public class AyUserController {
 //    }
 
     @Resource
-    private AyUserService ayUserService;
+    private DyUserService dyUserService;
 
     //    @RequestMapping("findById")
 //    public String findById(@RequestParam(value="id") String id){
-//        AyUser ayUser = ayUserService.findById(id);
+//        DyUser ayUser = dyUserService.findById(id);
 //        return "success";
 //    }
 
@@ -346,14 +342,14 @@ public class AyUserController {
 
 //    @GetMapping("/findById")
 //    public String findById(Model model){
-//        AyUser ayUser = ayUserService.findById("1");
+//        DyUser ayUser = dyUserService.findById("1");
 //        return "success";
 //    }
 //
 //    @GetMapping("/findAll")
 //    public String findAll(Model model){
-//        List<AyUser> ayUserList = ayUserService.findAll();
-//        for(AyUser ayUser : ayUserList){
+//        List<DyUser> ayUserList = dyUserService.findAll();
+//        for(DyUser ayUser : ayUserList){
 //            System.out.println("id: " + ayUser.getId());
 //            System.out.println("name: " + ayUser.getName());
 //        }
@@ -362,78 +358,78 @@ public class AyUserController {
 //
 //    @GetMapping("/findById")
 //    public String findById(Model model){
-//        AyUser ayUser = ayUserService.findById("1");
+//        DyUser ayUser = dyUserService.findById("1");
 //        return "success";
 //    }
 //
 //    @GetMapping("/findByName")
 //    public String findByName(Model model){
-//        List<AyUser> ayUsers = ayUserService.findByName("阿毅");
+//        List<DyUser> ayUsers = dyUserService.findByName("阿毅");
 //        return "success";
 //    }
 //
 //    @GetMapping("/countByName")
 //    public String countByName(Model model){
-//        int count = ayUserService.countByName("阿毅");
+//        int count = dyUserService.countByName("阿毅");
 //        return "success";
 //    }
 
 //    @GetMapping("/insert")
 //    public String insert(Model model){
-//        AyUser ayUser = new AyUser();
+//        DyUser ayUser = new DyUser();
 //        ayUser.setId(3);
 //        ayUser.setName("ay");
 //        ayUser.setPassword("123");
-//        int count = ayUserService.insert(ayUser);
+//        int count = dyUserService.insert(ayUser);
 //        return "success";
 //    }
 
     //    @GetMapping("/insert")
 ////    public String insert(Model model){
-////        AyUser ayUser = new AyUser();
+////        DyUser ayUser = new DyUser();
 ////        //ayUser.setId(3);
 ////        ayUser.setName("ay");
 ////        ayUser.setPassword("123");
-////        int count = ayUserService.insert(ayUser);
+////        int count = dyUserService.insert(ayUser);
 ////        return "success";
 ////    }
 ////
     @GetMapping("/update")
     public String update(Model model) {
-        AyUser ayUser = new AyUser();
-        ayUser.setId(1);
-        ayUser.setName("aaaa");
-        ayUser.setPassword("123");
-        int count = ayUserService.update(ayUser);
+        DyUser dyUser = new DyUser();
+        dyUser.setId(1);
+        dyUser.setName("aaaa");
+        dyUser.setPassword("123");
+        int count = dyUserService.update(dyUser);
         return "success";
     }
 ////
 ////    @GetMapping("/delete")
 ////    public String delete(Model model){
-////        int count = ayUserService.delete(4);
+////        int count = dyUserService.delete(4);
 ////        return "success";
 ////    }
 ////
 ////    @GetMapping("/deleteByName")
 ////    public String deleteByName(Model model){
-////        int count = ayUserService.deleteByName("al");
+////        int count = dyUserService.deleteByName("al");
 ////        return "success";
 ////    }
 ////
 ////    @GetMapping("/findByNameAndPassword")
 ////    public String findByNameAndPassword(Model model){
-////        //List<AyUser> ayUsers = ayUserService.findByNameAndPassword("ay","123");
-////        List<AyUser> ayUsers = ayUserService.findByNameAndPassword("al","123");
+////        //List<DyUser> ayUsers = dyUserService.findByNameAndPassword("ay","123");
+////        List<DyUser> ayUsers = dyUserService.findByNameAndPassword("al","123");
 ////        return "success";
 ////    }
 
 //    @GetMapping("/findByNameAndPassword")
 //    public String findByNameAndPassword(Model model){
-//        //List<AyUser> ayUsers = ayUserService.findByNameAndPassword("ay","123");
+//        //List<DyUser> ayUsers = dyUserService.findByNameAndPassword("ay","123");
 //        Map<String,String> map = new HashMap<String, String>();
 //        map.put("name","al");
 //        map.put("password","123");
-//        List<AyUser> ayUsers = ayUserService.findByNameAndPassword(map);
+//        List<DyUser> ayUsers = dyUserService.findByNameAndPassword(map);
 //        return "success";
 //    }
 
@@ -442,7 +438,7 @@ public class AyUserController {
 //        List<Integer> ids = new ArrayList<Integer>();
 //        ids.add(1);
 //        ids.add(2);
-//        List<AyUser> ayUsers = ayUserService.findByIds(ids);
+//        List<DyUser> ayUsers = dyUserService.findByIds(ids);
 //        return "success";
 //    }
 }

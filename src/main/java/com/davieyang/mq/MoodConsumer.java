@@ -14,7 +14,7 @@ import javax.jms.MessageListener;
 /**
  * 消费者
  *
- * @author Ay
+ * @author davieyang
  * @date 2017/11/30
  */
 @Component

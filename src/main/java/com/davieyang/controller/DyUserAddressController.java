@@ -1,8 +1,7 @@
 package com.davieyang.controller;
 
-import com.davieyang.model.AyUser;
-import com.davieyang.model.AyUserAddress;
-import com.davieyang.service.AyUserAddressService;
+import com.davieyang.model.DyUserAddress;
+import com.davieyang.service.DyUserAddressService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,14 +17,14 @@ import javax.annotation.Resource;
  **/
 @Controller
 @RequestMapping(value = "/address")
-public class AyUserAddressController {
+public class DyUserAddressController {
 
     @Resource
-    private AyUserAddressService ayUserAddressService;
+    private DyUserAddressService dyUserAddressService;
 
     @GetMapping("/findById")
     public String findById(Model model) {
-        AyUserAddress ayUserAddress = ayUserAddressService.findById(1);
+        DyUserAddress dyUserAddress = dyUserAddressService.findById(1);
         return "success";
     }
 }

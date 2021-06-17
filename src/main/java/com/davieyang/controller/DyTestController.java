@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Controller
 @RequestMapping(value = "/test")
-public class AyTestController {
+public class DyTestController {
 
     @GetMapping("/sayHello")
     public String sayHello(Model model) {

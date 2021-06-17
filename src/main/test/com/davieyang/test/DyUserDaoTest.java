@@ -1,18 +1,15 @@
 package com.davieyang.test;
 
-import com.davieyang.dao.AyUserDao;
-import com.davieyang.model.AyUser;
+import com.davieyang.dao.DyUserDao;
+import com.davieyang.model.DyUser;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.defaults.DefaultSqlSessionFactory;
 import org.junit.Test;
 import org.mybatis.spring.SqlSessionFactoryBean;
 
 import javax.annotation.Resource;
-import java.sql.Connection;
 import java.util.List;
 
 /**
@@ -21,15 +18,15 @@ import java.util.List;
  * @author davieyang
  * @create 2018/05/04
  **/
-public class AyUserDaoTest extends BaseJunit4Test {
+public class DyUserDaoTest extends BaseJunit4Test {
 
     @Resource
-    private AyUserDao ayUserDao;
+    private DyUserDao dyUserDao;
 
 //    @Test
 //    public void testFindAll(){
-//        List<AyUser> userList = ayUserDao.findAll(new RowBounds(0, 5));
-//        for(AyUser ayUser: userList){
+//        List<DyUser> userList = dyUserDao.findAll(new RowBounds(0, 5));
+//        for(DyUser ayUser: userList){
 //            System.out.println("name: " + ayUser.getName());
 //        }
 //    }
@@ -39,7 +36,7 @@ public class AyUserDaoTest extends BaseJunit4Test {
         //startPage(第几页, 多少条数据)
         PageHelper.startPage(0, 1);
         //查询所有用户
-        List<AyUser> userList = ayUserDao.findAll();
+        List<DyUser> userList = dyUserDao.findAll();
         //用PageInfo对结果进行包装
         PageInfo pageInfo = new PageInfo(userList);
     }
@@ -51,22 +48,22 @@ public class AyUserDaoTest extends BaseJunit4Test {
     public void testSessionCache() throws Exception {
         SqlSessionFactory sqlSessionFactory = sqlSessionFactoryBean.getObject();
         SqlSession sqlSession = sqlSessionFactory.openSession();
-        AyUserDao ayUserDao = sqlSession.getMapper(AyUserDao.class);
+        DyUserDao dyUserDao = sqlSession.getMapper(DyUserDao.class);
         //第一次查询
-        AyUser ayUser = ayUserDao.findById("1");
-        System.out.println("name: " + ayUser.getName()
-                + "  password:" + ayUser.getPassword());
+        DyUser dyUser = dyUserDao.findById("1");
+        System.out.println("name: " + dyUser.getName()
+                + "  password:" + dyUser.getPassword());
 
         //执行commit操作（如：更新、插入、删除等操作）
-        AyUser user = new AyUser();
+        DyUser user = new DyUser();
         user.setId(1);
         user.setName("al");
-        ayUserDao.update(ayUser);
+        dyUserDao.update(dyUser);
 
         //第二次查询
-        AyUser ayUser2 = ayUserDao.findById("1");
-        System.out.println("name: " + ayUser2.getName()
-                + "  password:" + ayUser2.getPassword());
+        DyUser dyUser2 = dyUserDao.findById("1");
+        System.out.println("name: " + dyUser2.getName()
+                + "  password:" + dyUser2.getPassword());
         sqlSession.close();
         ;
     }

@@ -10,10 +10,10 @@ import java.util.List;
 /**
  * 用户实体
  *
- * @author Ay
+ * @author davieyang
  * @date 2018/04/02
  */
-public class AyUser implements Serializable {
+public class DyUser implements Serializable {
 
     private Integer id;
     @NotBlank(message = "name不能为空")
@@ -24,9 +24,9 @@ public class AyUser implements Serializable {
     private Integer age;
 
     //用户和地址一一对应，即一个用户只有一个老家地址
-    private AyUserAddress ayUserAddress;
+    private DyUserAddress dyUserAddress;
 
-    private List<AyRole> ayRoleList;
+    private List<DyRole> dyRoleList;
 
     public Integer getId() {
         return id;
@@ -60,19 +60,19 @@ public class AyUser implements Serializable {
         this.age = age;
     }
 
-    public AyUserAddress getAyUserAddress() {
-        return ayUserAddress;
+    public DyUserAddress getAyUserAddress() {
+        return dyUserAddress;
     }
 
-    public void setAyUserAddress(AyUserAddress ayUserAddress) {
-        this.ayUserAddress = ayUserAddress;
+    public void setAyUserAddress(DyUserAddress dyUserAddress) {
+        this.dyUserAddress = dyUserAddress;
     }
 
-    public List<AyRole> getAyRoleList() {
-        return ayRoleList;
+    public List<DyRole> getAyRoleList() {
+        return dyRoleList;
     }
 
-    public void setAyRoleList(List<AyRole> ayRoleList) {
-        this.ayRoleList = ayRoleList;
+    public void setAyRoleList(List<DyRole> dyRoleList) {
+        this.dyRoleList = dyRoleList;
     }
 }

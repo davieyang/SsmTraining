@@ -8,19 +8,19 @@ import org.springframework.stereotype.Component;
 /**
  * 描述：日志拦截类
  *
- * @author Ay
+ * @author davieyang
  * @create 2018/04/22
  **/
 @Aspect
 @Component
 public class LogInterceptor {
 
-    @Before(value = "execution(* com.ay.controller.*.*(..))")
+    @Before(value = "execution(* com.davieyang.controller.*.*(..))")
     public void before() {
         System.out.println("进入方法时间为:" + System.currentTimeMillis());
     }
 
-    @After(value = "execution(* com.ay.controller.*.*(..))")
+    @After(value = "execution(* com.davieyang.controller.*.*(..))")
     public void after() {
         System.out.println("退出方法时间为:" + System.currentTimeMillis());
     }

@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * 用户DTO
- * Created by Ay on 2020/3/22.
+ * Created by davieyang on 2020/3/22.
  */
 public class SysUserDTO implements Serializable {
 

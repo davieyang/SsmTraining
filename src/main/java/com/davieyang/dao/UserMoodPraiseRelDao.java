@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 /**
  * 描述：用户说说点赞关联DAO
  *
- * @author Ay
+ * @author davieyang
  * @create 2018/07/01
  **/
 @Repository

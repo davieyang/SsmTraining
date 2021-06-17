@@ -1,17 +1,20 @@
 package com.davieyang.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
- * 描述：用户地址实体
+ * 描述：学校实体
  *
- * @author Ay
+ * @author davieyang
  * @create 2018/05/01
  **/
-public class AyUserAddress implements Serializable {
+public class DySchool implements Serializable {
 
     private Integer id;
     private String name;
+    //一个学校有多个学生
+    private List<DyStudent> students;
 
     public Integer getId() {
         return id;
@@ -27,5 +30,13 @@ public class AyUserAddress implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<DyStudent> getStudents() {
+        return students;
+    }
+
+    public void setStudents(List<DyStudent> students) {
+        this.students = students;
     }
 }

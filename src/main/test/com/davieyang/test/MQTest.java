@@ -19,7 +19,7 @@ public class MQTest extends BaseJunit4Test {
     private MoodProducer moodProducer;
 
     //队列
-    private static Destination destination = new ActiveMQQueue("ay.queue.high.concurrency-praise");
+    private static Destination destination = new ActiveMQQueue("davieyang.queue.high.concurrency-praise");
 
     @Test
     public void testMQ() {

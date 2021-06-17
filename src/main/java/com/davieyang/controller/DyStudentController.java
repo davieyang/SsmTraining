@@ -1,9 +1,7 @@
 package com.davieyang.controller;
 
-import com.davieyang.model.AySchool;
-import com.davieyang.model.AyUserAddress;
-import com.davieyang.service.AySchoolService;
-import com.davieyang.service.AyUserAddressService;
+import com.davieyang.model.DyStudent;
+import com.davieyang.service.DyStudentService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,15 +16,15 @@ import javax.annotation.Resource;
  * @create 2018/05/01
  **/
 @Controller
-@RequestMapping(value = "/school")
-public class AySchoolController {
+@RequestMapping(value = "/student")
+public class DyStudentController {
 
     @Resource
-    private AySchoolService aySchoolService;
+    private DyStudentService dyStudentService;
 
     @GetMapping("/findById")
     public String findById(Model model) {
-        AySchool aySchool = aySchoolService.findById(1);
+        DyStudent dyStudent = dyStudentService.findById(1);
         return "success";
     }
 }

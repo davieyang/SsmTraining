@@ -8,13 +8,13 @@ import java.io.Serializable;
  * @author davieyang
  * @create 2018/05/01
  **/
-public class AyStudent implements Serializable {
+public class DyStudent implements Serializable {
 
     private Integer id;
     private String name;
     private Integer age;
     //一个学生只能在一个学校
-    private AySchool aySchool;
+    private DySchool dySchool;
 
     public Integer getId() {
         return id;
@@ -40,11 +40,11 @@ public class AyStudent implements Serializable {
         this.age = age;
     }
 
-    public AySchool getAySchool() {
-        return aySchool;
+    public DySchool getAySchool() {
+        return dySchool;
     }
 
-    public void setAySchool(AySchool aySchool) {
-        this.aySchool = aySchool;
+    public void setAySchool(DySchool dySchool) {
+        this.dySchool = dySchool;
     }
 }

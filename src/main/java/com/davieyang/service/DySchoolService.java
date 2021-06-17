@@ -1,6 +1,6 @@
 package com.davieyang.service;
 
-import com.davieyang.model.AyUserAddress;
+import com.davieyang.model.DySchool;
 
 /**
  * 描述：地址服务接口
@@ -8,7 +8,7 @@ import com.davieyang.model.AyUserAddress;
  * @author davieyang
  * @create 2018/05/01
  **/
-public interface AyUserAddressService {
+public interface DySchoolService {
 
-    AyUserAddress findById(Integer id);
+    DySchool findById(Integer id);
 }
