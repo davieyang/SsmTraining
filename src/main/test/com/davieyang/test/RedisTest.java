@@ -1,4 +1,4 @@
-package com.ay.test;
+package com.davieyang.test;
 
 import org.junit.Test;
 import org.springframework.data.redis.core.RedisTemplate;

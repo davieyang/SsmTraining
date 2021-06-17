@@ -1,4 +1,4 @@
-package com.ay.test;
+package com.davieyang.test;
 
 import javax.annotation.Resource;
 import java.lang.reflect.InvocationHandler;

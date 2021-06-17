@@ -1,7 +1,7 @@
-package com.ay.test;
+package com.davieyang.test;
 
-import com.ay.dao.AyUserDao;
-import com.ay.model.AyUser;
+import com.davieyang.dao.AyUserDao;
+import com.davieyang.model.AyUser;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.apache.ibatis.session.RowBounds;

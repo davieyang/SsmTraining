@@ -1,8 +1,8 @@
-package com.ay.test;
+package com.davieyang.test;
 
-import com.ay.dao.MoodDao;
-import com.ay.dao.UserDao;
-import com.ay.model.Mood;
+import com.davieyang.dao.MoodDao;
+import com.davieyang.dao.UserDao;
+import com.davieyang.model.Mood;
 import org.junit.Test;
 
 import javax.annotation.Resource;

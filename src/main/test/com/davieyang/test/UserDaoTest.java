@@ -1,7 +1,7 @@
-package com.ay.test;
+package com.davieyang.test;
 
-import com.ay.dao.UserDao;
-import com.ay.model.User;
+import com.davieyang.dao.UserDao;
+import com.davieyang.model.User;
 import org.junit.Test;
 
 import javax.annotation.Resource;

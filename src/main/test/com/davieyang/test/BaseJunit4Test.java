@@ -1,4 +1,4 @@
-package com.ay.test;
+package com.davieyang.test;
 
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;

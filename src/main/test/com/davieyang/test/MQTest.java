@@ -1,8 +1,8 @@
-package com.ay.test;
+package com.davieyang.test;
 
-import com.ay.dto.MoodDTO;
-import com.ay.model.Mood;
-import com.ay.mq.MoodProducer;
+import com.davieyang.dto.MoodDTO;
+import com.davieyang.model.Mood;
+import com.davieyang.mq.MoodProducer;
 import org.apache.activemq.command.ActiveMQQueue;
 import org.junit.Test;
 
