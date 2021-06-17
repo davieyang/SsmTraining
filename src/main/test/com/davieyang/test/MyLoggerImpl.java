@@ -7,7 +7,7 @@ import java.lang.reflect.Method;
 /**
  * 描述：日志实现类
  *
- * @author Ay
+ * @author davieyang
  * @create 2018/04/22
  **/
 public class MyLoggerImpl implements MyLogger {

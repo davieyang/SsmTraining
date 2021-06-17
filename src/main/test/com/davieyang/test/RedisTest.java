@@ -8,7 +8,7 @@ import javax.annotation.Resource;
 /**
  * redis缓存测试
  *
- * @author Ay
+ * @author davieyang
  * @create 2018/07/08
  **/
 public class RedisTest extends BaseJunit4Test {
@@ -18,7 +18,7 @@ public class RedisTest extends BaseJunit4Test {
 
     @Test
     public void testRedis() {
-        redisTemplate.opsForValue().set("name", "ay");
+        redisTemplate.opsForValue().set("name", "davieyang");
         String name = (String) redisTemplate.opsForValue().get("name");
         System.out.println("value of name is:" + name);
     }

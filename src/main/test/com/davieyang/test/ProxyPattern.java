@@ -3,7 +3,7 @@ package com.davieyang.test;
 /**
  * 描述：客户端类
  *
- * @author Ay
+ * @author davieyang
  * @create 2018/04/22
  **/
 public class ProxyPattern {
@@ -16,7 +16,7 @@ public class ProxyPattern {
 /**
  * 描述：抽象主题类
  *
- * @author Ay
+ * @author davieyang
  * @create 2018/04/22
  **/
 abstract class Subject {
@@ -26,7 +26,7 @@ abstract class Subject {
 /**
  * 描述：具体主题类
  *
- * @author Ay
+ * @author davieyang
  * @create 2018/04/22
  **/
 class RealSubject extends Subject {
@@ -39,7 +39,7 @@ class RealSubject extends Subject {
 /**
  * 描述：代理类
  *
- * @author Ay
+ * @author davieyang
  * @create 2018/04/22
  **/
 class Proxy extends Subject {

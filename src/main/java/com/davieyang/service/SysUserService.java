@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * 用户服务接口
- * Created by Ay on 2020/3/22.
+ * Created by davieyang on 2020/3/22.
  */
 public interface SysUserService {
 

@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 描述：说说接口
  *
- * @author Ay
+ * @author davieyang
  * @date 2018/1/6.
  */
 public interface MoodService {

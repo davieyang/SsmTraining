@@ -5,7 +5,7 @@ import java.lang.reflect.Proxy;
 /**
  * 描述：测试类
  *
- * @author Ay
+ * @author davieyang
  * @create 2018/04/22
  **/
 public class MyLoggerTest {

@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 /**
  * 描述：日志类接口
  *
- * @author Ay
+ * @author davieyang
  * @create 2018/04/22
  **/
 public interface MyLogger {

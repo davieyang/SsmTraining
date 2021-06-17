@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * 描述：用户DAO测试类
  *
- * @author Ay
+ * @author davieyang
  * @create 2018/05/04
  **/
 public class UserDaoTest extends BaseJunit4Test {

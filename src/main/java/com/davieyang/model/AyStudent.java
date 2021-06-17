@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * 描述：学生实体
  *
- * @author Ay
+ * @author davieyang
  * @create 2018/05/01
  **/
 public class AyStudent implements Serializable {

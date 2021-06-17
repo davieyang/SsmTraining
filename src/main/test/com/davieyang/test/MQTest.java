@@ -10,7 +10,7 @@ import javax.annotation.Resource;
 import javax.jms.Destination;
 
 /**
- * @author Ay
+ * @author davieyang
  * @create 2018/07/14
  **/
 public class MQTest extends BaseJunit4Test {

@@ -40,7 +40,7 @@ public class SpringTest {
     }
 
     public void sayHello() {
-        System.out.println("hello ay");
+        System.out.println("hello davieyang");
     }
 
 }
