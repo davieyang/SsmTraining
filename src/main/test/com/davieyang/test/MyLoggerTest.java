@@ -12,7 +12,7 @@ public class MyLoggerTest {
 
     public static void main(String[] args) {
         int i = 1;
-        Integer ii = 1;
+        int ii = 1;
         if (i == ii) {
             System.out.println("111");
         }

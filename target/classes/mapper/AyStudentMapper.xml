@@ -7,7 +7,7 @@
         <id property="id" column="id"/>
         <result property="name" column="name"/>
         <result property="age" column="age"/>
-        <association property="aySchool" javaType="com.ay.model.AySchool">
+        <association property="dySchool" javaType="com.ay.model.AySchool">
             <id property="id" column="id"/>
             <result property="name" column="name"/>
         </association>

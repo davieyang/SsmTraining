@@ -8,14 +8,14 @@
         <id property="id" column="id"/>
         <result property="name" column="name"/>
         <result property="password" column="password"/>
-        <!--<association property="ayUserAddress" column="address_id"-->
-        <!--select="com.ay.dao.AyUserAddressDao.findById" javaType="com.ay.model.AyUserAddress">-->
+        <!--<association property="dyUserAddress" column="address_id"-->
+        <!--select="com.ay.dao.DyUserAddressDao.findById" javaType="com.ay.model.DyUserAddress">-->
         <!--</association>-->
 
-        <!--<collection property="ayRoleList" javaType="ArrayList" column="id"-->
-        <!--ofType="com.ay.model.AyRole"-->
+        <!--<collection property="dyRoleList" javaType="ArrayList" column="id"-->
+        <!--ofType="com.ay.model.DyRole"-->
         <!--fetchType="lazy"-->
-        <!--select="com.ay.dao.AyRoleDao.findByUserId">-->
+        <!--select="com.ay.dao.DyRoleDao.findByUserId">-->
         <!--<id property="id" column="id"/>-->
         <!--<result property="name" column="name"/>-->
         <!--</collection>-->
@@ -45,13 +45,13 @@
         from ay_user a
     </select>
 
-    <!--<resultMap id="userMap" type="com.ay.model.AyUser">-->
+    <!--<resultMap id="userMap" type="com.ay.model.DyUser">-->
     <!--<id property="id" column="id"/>-->
     <!--<result property="name" column="name"/>-->
     <!--<result property="password" column="password"/>-->
     <!--</resultMap>-->
 
-    <!--<select id="findAll" resultType="com.ay.model.AyUser">-->
+    <!--<select id="findAll" resultType="com.ay.model.DyUser">-->
     <!--select-->
     <!--<include refid="userField">-->
     <!--<property name="prefix" value="a"/>-->
@@ -80,7 +80,7 @@
     <!--</sql>-->
 
     <!-- 获取所有用户 -->
-    <!--<select id="findAll" resultType="com.ay.model.AyUser">-->
+    <!--<select id="findAll" resultType="com.ay.model.DyUser">-->
     <!--select-->
     <!--<include refid="userField">-->
     <!--<property name="prefix" value="a"/>-->
@@ -88,25 +88,25 @@
     <!--from ay_user a-->
     <!--</select>-->
 
-    <!--<select id="findById"  parameterType="String" resultType="com.ay.model.AyUser">-->
+    <!--<select id="findById"  parameterType="String" resultType="com.ay.model.DyUser">-->
     <!--SELECT <include refid="userField"></include>-->
     <!--FROM ay_user a-->
     <!--WHERE id = #{id}-->
     <!--</select>-->
 
-    <!--<select id="findByName"  parameterType="String" resultType="com.ay.model.AyUser">-->
+    <!--<select id="findByName"  parameterType="String" resultType="com.ay.model.DyUser">-->
     <!--SELECT * FROM ay_user-->
     <!--WHERE name = #{name}-->
     <!--</select>-->
 
-    <!--<select id="findByName"  parameterType="String" resultType="com.ay.model.AyUser">-->
+    <!--<select id="findByName"  parameterType="String" resultType="com.ay.model.DyUser">-->
     <!--SELECT * FROM ay_user WHERE 1 = 1-->
     <!--<if test="name != null and name != ''">-->
     <!--and name = #{name}-->
     <!--</if>-->
     <!--</select>-->
 
-    <!--<select id="findByName"  parameterType="String" resultType="com.ay.model.AyUser">-->
+    <!--<select id="findByName"  parameterType="String" resultType="com.ay.model.DyUser">-->
     <!--SELECT * FROM ay_user-->
     <!--<where>-->
     <!--<if test="name != null and name != ''">-->
@@ -120,29 +120,29 @@
     <!--WHERE name = #{name}-->
     <!--</select>-->
 
-    <!--<insert id="insert" parameterType="com.ay.model.AyUser">-->
+    <!--<insert id="insert" parameterType="com.ay.model.DyUser">-->
     <!--INSERT INTO ay_user(id, name, password) VALUE (#{id}, #{name}, #{password});-->
     <!--</insert>-->
 
-    <!--<insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="com.ay.model.AyUser">-->
+    <!--<insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="com.ay.model.DyUser">-->
     <!--INSERT INTO ay_user(name, password) VALUE (#{name}, #{password});-->
     <!--</insert>-->
 
-    <!--<insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="com.ay.model.AyUser">-->
+    <!--<insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="com.ay.model.DyUser">-->
     <!--<selectKey keyProperty="id" resultType="int" order="BEFORE">-->
     <!--SELECT MAX(id) + 1 AS id FROM ay_user-->
     <!--</selectKey>-->
     <!--INSERT INTO ay_user(id, name, password) VALUE (#{id}, #{name}, #{password});-->
     <!--</insert>-->
 
-    <!--<update id="update" parameterType="com.ay.model.AyUser">-->
+    <!--<update id="update" parameterType="com.ay.model.DyUser">-->
     <!--UPDATE ay_user SET-->
     <!--name = #{name},-->
     <!--password = #{password}-->
     <!--WHERE id = #{id}-->
     <!--</update>-->
 
-    <!--<update id="update" parameterType="com.ay.model.AyUser">-->
+    <!--<update id="update" parameterType="com.ay.model.DyUser">-->
     <!--UPDATE ay_user-->
     <!--<set>-->
     <!--<if test="name != null and name != ''">-->
@@ -155,7 +155,7 @@
     <!--WHERE id = #{id}-->
     <!--</update>-->
 
-    <!--<update id="update" parameterType="com.ay.model.AyUser">-->
+    <!--<update id="update" parameterType="com.ay.model.DyUser">-->
     <!--UPDATE ay_user-->
     <!--<trim prefix="SET" suffixOverrides=",">-->
     <!--<if test="name != null and name != ''">-->
@@ -197,7 +197,7 @@
     <!--WHERE 1 = 1 AND name = #{param1} AND password = #{param2}-->
     <!--</select>-->
 
-    <!--<select id="findByNameAndPassword" parameterType="String" resultType="com.ay.model.AyUser">-->
+    <!--<select id="findByNameAndPassword" parameterType="String" resultType="com.ay.model.DyUser">-->
     <!--<bind name="name_pattern" value="'%' + name + '%'"/>-->
     <!--<bind name="password_pattern" value="'%' + password + '%'"/>-->
     <!--SELECT * FROM ay_user-->
@@ -240,7 +240,7 @@
     <!--</trim>-->
     <!--</select>-->
 
-    <!--<select id="findByIds" resultType="com.ay.model.AyUser">-->
+    <!--<select id="findByIds" resultType="com.ay.model.DyUser">-->
     <!--SELECT * FROM ay_user-->
     <!--WHERE id in-->
     <!--<foreach item="item" index="index" collection="list"-->

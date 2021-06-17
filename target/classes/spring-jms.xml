@@ -36,7 +36,7 @@
                             container-type="default" connection-factory="connectionFactory"
                             acknowledge="auto">
         <!-- 可写多个监听器 -->
-        <jms:listener destination="ay.queue.high.concurrency.praise"
+        <jms:listener destination="davieyang.queue.high.concurrency.praise"
                       ref="moodConsumer"/>
     </jms:listener-container>
     <!-- 消息消费者 end -->
